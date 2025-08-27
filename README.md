@@ -1,7 +1,8 @@
 # React Shopping Cart with Free Gift Feature
 
 ## Objective
-This is a simple React application that allows users to:
+
+This is a simple React application that allows users to do following:
 
 - Browse a list of products.
 - Add products to a shopping cart.
@@ -13,12 +14,14 @@ The application also automatically adds a free gift once the threshold is reache
 ## Features
 
 ### Display Products
+
 - Renders a list of products from the `PRODUCTS` constant.
 - Each product includes:
   - Quantity selector (`+` and `-` buttons).
   - "Add to Cart" button.
 
 ### Shopping Cart
+
 - Displays all added products with quantities and subtotal.
 - Users can:
   - Update product quantities directly in the cart.
@@ -26,6 +29,7 @@ The application also automatically adds a free gift once the threshold is reache
 - Free gift is automatically added or removed based on cart subtotal.
 
 ### Free Gift Rule
+
 - Threshold: `THRESHOLD = 1000`.
 - Free gift: `FREE_GIFT = { id: 99, name: "Wireless Mouse", price: 0 }`.
 - Progress bar shows how much more needs to be added to unlock the free gift.
@@ -33,15 +37,18 @@ The application also automatically adds a free gift once the threshold is reache
 - Free gift cannot be removed manually.
 
 ### State Management
+
 - Uses React’s built-in `useState` and `useEffect`.
 - Maintains separate states for products and cart.
 
 ### User Experience
+
 - Smooth interactions for adding/removing items.
 - Message displayed when the free gift is applied.
 - Mobile responsive design following the provided UI.
 
 ## Data Constants
+
 ```javascript
 const PRODUCTS = [
   { id: 1, name: "Laptop", price: 500 },
@@ -52,3 +59,4 @@ const PRODUCTS = [
 
 const FREE_GIFT = { id: 99, name: "Wireless Mouse", price: 0 };
 const THRESHOLD = 1000;
+```
