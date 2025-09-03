@@ -82,6 +82,7 @@ const ListOfSalesAgent = () => {
         setIsExporting(true);
         try {
             const allUsers = await fetchAllUsers();
+            console.log("allUsers",allUsers)
             setIsExporting(false);
 
             if (!allUsers || allUsers.length === 0) {
@@ -98,8 +99,15 @@ const ListOfSalesAgent = () => {
                 "User Name": `${user.first_name || ''} ${user.last_name || ''}`,
                 "Contact No.": `${user.mobile_no_country_code || ''}${user.mobile_no || ''}`,
                 "Email": user.email || '',
-                "Enroll Amount Deduction": user.enrollAmountDeduction || 'N/A',
-                "Referral Code": user.referralCode || 'N/A',
+                "Enroll Amount Deduction": user.enrollAmountDeduction || '',
+                "Referral Code": user.referralCode || '',
+                "Total Unpaid": user.totalUnPaid || '',
+                "Total Commission": user.totalCommission || '',
+                "Account Holder Name": user.accountHolderName || '',
+                "Account Number": user.accountNumber || '',
+                "Account Type": user.accountType || '',
+                "Bank Name": user?.bankId?.bank_name || '',
+                "Branch Code": user?.bankId?.branch_code || '',
             }));
 
             // ✅ Create worksheet
