@@ -35,7 +35,9 @@ import AddService from "./pages/AddService";
 import ListOfMeetingLinkTrips from "./pages/ListOfMeetingLinkTrip";
 import ChangePassword from "./pages/ChangePassword";
 import SalesAgentHome from "./pages/SalesAgentHome";
-function App() {
+function 
+
+App() {
     return (
         <>
             <RouterProvider router={router} />

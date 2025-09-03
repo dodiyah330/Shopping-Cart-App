@@ -292,11 +292,13 @@ const ListOfSalesAgent = () => {
                                                         <th>Enroll Amount Deduction</th>
                                                         <th>Eared Amount</th>
                                                         <th>Unpaid Amount</th>
-                                                        <th>Total User</th>
+                                                        <th>Total Users</th>
                                                         <th>Account Number</th>
                                                         <th>Bank Name</th>
                                                         <th>Branch Code</th>
                                                         <th>Share Status</th>
+                                                        <th>Performance Level</th>
+                                                        <th>Tie</th>
                                                         <th>&nbsp;</th>
                                                         <th>&nbsp;</th>
                                                         <th>&nbsp;</th>
@@ -353,6 +355,14 @@ const ListOfSalesAgent = () => {
                                                             <td className={!user.sharedStatus ? "nodata" : ""}>
                                                                 {user.sharedStatus}
                                                             </td>
+
+                                                            <td className={!user.performanceLevel ? "nodata" : ""}>
+                                                                {user.performanceLevel ? user.performanceLevel : ""}
+                                                            </td>
+                                                            <td className={!user.tie ? "nodata" : ""}>
+                                                                {user.tie}
+                                                            </td>
+                                                            
                                                             {/* <td className={!user.enrollAmountDeduction ? "nodata" : ""}>
                                                             {user.enrollAmountDeduction}
                                                         </td> */}
